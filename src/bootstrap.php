@@ -9,7 +9,6 @@ $injector = include_once(dirname(__DIR__) . '/src/config/Di.php');
 $request = $injector->make('Http\HttpRequest');
 $response = $injector->make('Http\HttpResponse');
 
-
 /**
  * Routes
  */
