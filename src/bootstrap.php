@@ -39,10 +39,12 @@ switch ($routeInfo[0]) {
     case Dispatcher::FOUND:
         $className = $routeInfo[1][0];
         $method = $routeInfo[1][1];
-        $vars = $routeInfo[2];
+
+        /* @var array $params ['from'=> '', 'to' => '', 'amount' => ''] */
+        $params = $routeInfo[2];
 
         $class = $injector->make($className);
-        $class->$method($vars);
+        $class->$method($params);
         break;
 }
 

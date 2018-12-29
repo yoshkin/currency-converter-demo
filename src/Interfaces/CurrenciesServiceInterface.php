@@ -12,7 +12,7 @@ interface CurrenciesServiceInterface
 
     /**
      * Convert origin currency to desired
-     * @param array $params
+     * @param array $params ['from'=> '', 'to' => '', 'amount' => '']
      * @return string
      */
     public function convertCurrency($params = array()) : float ;
