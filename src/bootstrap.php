@@ -17,7 +17,7 @@ $dispatcher = FastRoute\simpleDispatcher(function(RouteCollector $r) {
     $r->get('/', ['AYashenkov\Http\Controllers\IndexController', 'index']);
     //API Routes
     $r->addGroup('/api', function (RouteCollector $r) {
-        $r->get('/convert/{from}/{to}/{amount:\d+}', ['AYashenkov\Http\Controllers\Api\ConverterController', 'index']);
+        $r->get('/convert/{from}/{to}/{amount}', ['AYashenkov\Http\Controllers\Api\ConverterController', 'index']);
     });
 });
 
